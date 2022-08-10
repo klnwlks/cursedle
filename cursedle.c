@@ -74,7 +74,8 @@ void format_ans(WINDOW *win, char *ans, int *y){
 
     for (int i = 0; i < 5; i++){
 	// could be better
-	if ((int)ans[i] < 65 || (int)ans[i] > 122 || ((int)ans[i] > 90 && (int)ans[i] < 97)) {
+	if ((int)ans[i] < 65 || (int)ans[i] > 122 ||
+		((int)ans[i] > 90 && (int)ans[i] < 97)) {
 	    mvwprintw(win, 3, (WIDTH - 14) / 2, "invalid input.");
 	    --(*y);
 	    wgetch(win);
