@@ -119,7 +119,7 @@ void init_game(){
     char *curr_day = get_time(), *past_day = get_time();
 
     int word_size = sizeof(WORDS)/sizeof(WORDS[0]);
-    // strcpy(WOTD, WORDS[rand() % word_size]);
+    strcpy(WOTD, WORDS[rand() % word_size]);
 
     touchwin(game_win);
     mvwprintw(game_win, 1, (WIDTH - 8) / 2, "CURSEDLE");
